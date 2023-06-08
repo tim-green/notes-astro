@@ -4,15 +4,13 @@ module.exports = {
 	theme: {
 		extend: {},
 		colors: {
-			transparent: 'transparent',
-			current: 'currentColor',
 			'white': '#ffffff',
 			'black': '#050505',
+			'black-600':'#161616',
 			'emerald-300': '#38ef7d',
 			'emerald-500': '#11998e',
-			'zinc-900':'#161616',
 			'purple-900': '#4f165b',
-			'purple-950' : '#631baf',
+			'purple-950': '#631baf',
 		  },
 	},
   safelist: ['dark:!text-white'],
