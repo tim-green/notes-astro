@@ -1,81 +1,107 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Code } from 'astro/components'
+import Layout from '../layouts/Base.astro';
+
+const CODE = `# Clone the repository
+git clone https://github.com/TheOtterlord/manual
+# Navigate to the directory
+cd manual
+# Install dependencies
+npm install
+# Start the dev server
+npm run dev`
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Manual">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+    <div class="max-w-6xl mx-auto dark:text-white md:py-32 md:flex">
+      <div class="p-8 md:w-1/2">
+        <h1 class="text-6xl font-bold my-4">Manual</h1>
+        <p class="text-2xl my-8">
+          Build <b class="text-green-600 dark:text-green-400">robust</b>, <b class="text-green-600 dark:text-green-400">modern</b> documentation sites with the Manual theme.
+        </p>
+        <a href="/docs/get-started/introduction" class="inline-block bg-green-700 hover:bg-green-800 text-white text-lg font-bold py-2 px-4 rounded">
+          GET STARTED
+        </a>
+      </div>
+      <div class="w-full p-8 md:w-1/2 [&_pre]:p-4 [&_pre]:rounded-2xl [&_pre]:shadow-xl [&_pre]:border-2 [&_pre]:border-green-500">
+        <Code code={CODE} lang="sh"/>
+      </div>
+    </div>
+    <div class="bg-green-700 dark:bg-zinc-800">
+      <div class="max-w-6xl mx-auto md:py-16 p-8 text-center">
+        <h1 class="text-white text-6xl font-bold mb-16">Build Your Project!</h1>
+        <div class="md:flex md:justify-center space-y-8 md:space-y-0 md:gap-x-8 dark:text-white">
+          <div>
+            <div class="bg-zinc-100 dark:bg-zinc-900 p-8 rounded-2xl shadow-xl">
+              <h2 class="text-2xl font-bold">Card 1</h2>
+              <p class="text-gray-600 dark:text-gray-400 my-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam
+                tortor, eget aliquam nisl elit non nisl.
+              </p>
+              <a href="/docs/get-started/introduction" class="inline-block bg-green-700 hover:bg-green-800 text-white text-lg font-bold py-2 px-4 rounded">
+                LEARN
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="bg-zinc-100 dark:bg-zinc-900 p-8 rounded-2xl shadow-xl">
+              <h2 class="text-2xl font-bold">Card 2</h2>
+              <p class="text-gray-600 dark:text-gray-400 my-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam
+                tortor, eget aliquam nisl elit non nisl.
+              </p>
+              <a href="/docs/guides/migrate-from-z" class="inline-block bg-green-700 hover:bg-green-800 text-white text-lg font-bold py-2 px-4 rounded">
+                MIGRATE
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="bg-zinc-100 dark:bg-zinc-900 p-8 rounded-2xl shadow-xl">
+              <h2 class="text-2xl font-bold">Card 3</h2>
+              <p class="text-gray-600 dark:text-gray-400 my-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam
+                tortor, eget aliquam nisl elit non nisl.
+              </p>
+              <a href="/docs/get-started/installation" class="inline-block bg-green-700 hover:bg-green-800 text-white text-lg font-bold py-2 px-4 rounded">
+                INSTALL
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto dark:text-white md:py-32 md:flex md:flex-wrap">
+      <div class="p-8 md:w-1/2">
+        <h2 class="text-4xl font-bold my-4">Point 1</h2>
+        <p class="text-lg my-8">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate maxime corporis expedita consequuntur ipsa, eaque a suscipit, voluptatem voluptas excepturi aperiam magnam, eos quo est ipsam amet illo laboriosam consequatur.
+        </p>
+      </div>
+      <div class="p-8 md:w-1/2">
+        <h2 class="text-4xl font-bold my-4">Point 2</h2>
+        <p class="text-lg my-8">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate maxime corporis expedita consequuntur ipsa, eaque a suscipit, voluptatem voluptas excepturi aperiam magnam, eos quo est ipsam amet illo laboriosam consequatur.
+        </p>
+      </div>
+      <div class="p-8 md:w-1/2">
+        <h2 class="text-4xl font-bold my-4">Point 3</h2>
+        <p class="text-lg my-8">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate maxime corporis expedita consequuntur ipsa, eaque a suscipit, voluptatem voluptas excepturi aperiam magnam, eos quo est ipsam amet illo laboriosam consequatur.
+        </p>
+      </div>
+      <div class="p-8 md:w-1/2">
+        <h2 class="text-4xl font-bold my-4">Point 4</h2>
+        <p class="text-lg my-8">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate maxime corporis expedita consequuntur ipsa, eaque a suscipit, voluptatem voluptas excepturi aperiam magnam, eos quo est ipsam amet illo laboriosam consequatur.
+        </p>
+      </div>
+      <a href="/docs/get-started/introduction" class="w-fit px-8 my-4 text-center mx-auto block bg-green-700 hover:bg-green-800 text-white text-lg font-bold py-2 rounded">
+        GET STARTED
+      </a>
+    </div>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
